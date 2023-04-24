@@ -11,9 +11,9 @@ POST http://localhost:8888/catagory
 Content-Type: application/json
 
 {
-    "name": "Catagory 1",
+    "name": "Catagory 2",
     "color": "#333",
-    "icon": "Icon Catagory 1"
+    "icon": "Icon Catagory 2"
 }
 
 ###
@@ -59,3 +59,7 @@ GET http://localhost:8888/products
 ###
 
 GET http://localhost:8888/products/64455388c5554f9eb7b66165
+
+###
+
+PUT http://localhost:8888/products/64455388c5554f9eb7b66165

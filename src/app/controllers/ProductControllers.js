@@ -49,7 +49,46 @@ class ProductControllers {
     }
 
     //[PUT] /product/:id
+    updateById(req, res) {
+        Product.findByIdAndUpdate(req.params.id, req.body, { new: true })
+        .then((product) => {
+            if (!product) {
+                res.status(404).json({
+                    mesg: "Product is not found to update",
+                });
+            } else {
+                res.status(200).json({
+                    mesg: "Product updated success",
+                    product,
+                });
+            }
+        })
+        .catch((err) => res.status(500).json(err));
+    }
+
     //[DELETE] /product/:id
+    deleteById(req, res) {
+        Product.findByIdAndDelete(req.params.id)
+        .then((product) => {
+            if (product) {
+                res.status(200).json({
+                    mesg: "The product is delete success",
+                    success: true,
+                });
+            } else {
+                res.status(404).json({
+                    mesg: "product not found to delete",
+                    success: false,
+                });
+            }
+        })
+        .catch((err) => {
+            res.status(400).json({
+                mesg: "Delete false",
+                err,
+            });
+        });
+    }
 }
 
 export default new ProductControllers();
