@@ -1,0 +1,61 @@
+
+GET http://localhost:8888/catagory
+
+###
+
+GET  http://localhost:8888/catagory/64434cdd357b196957613422
+
+###
+
+POST http://localhost:8888/catagory
+Content-Type: application/json
+
+{
+    "name": "Catagory 1",
+    "color": "#333",
+    "icon": "Icon Catagory 1"
+}
+
+###
+
+DELETE http://localhost:8888/catagory/6442c1b265c8ef367c57deb6
+
+###
+
+PUT http://localhost:8888/catagory/64434cdd357b19695761342
+Content-Type: application/json
+
+{
+    "name": "Catagory 2 - updated",
+    "color": "#222",
+    "icon": "Icon Catagory 2 - updated"
+}
+
+
+###
+
+
+POST http://localhost:8888/products
+Content-Type: application/json
+
+{
+    "name": "Product 2",
+    "description": "Description Product 2",
+    "richDescription": "Rich Description Product 2",
+    "image": "Image Product 2",
+    "brand": "Brand 2",
+    "price": 20,
+    "catagory": "6443690e0029d49d612941c",
+    "countInStock": 6,
+    "rating": 8,
+    "numReviews": 3,
+    "isFeatured": false
+}
+
+###
+
+GET http://localhost:8888/products
+
+###
+
+GET http://localhost:8888/products/64455388c5554f9eb7b66165
