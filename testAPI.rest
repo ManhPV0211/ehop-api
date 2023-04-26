@@ -55,7 +55,7 @@ Content-Type: application/json
 ###
 
 GET http://localhost:8888/products
-
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mbyI6eyJ1c2VySW5mbyI6IjY0NDg3YTg5OGQwMGQxMDU1MmViMmQ3YyIsImlhdCI6MTY4MjQ5NzA3NywiZXhwIjoxNjgyNTgzNDc3fSwiaWF0IjoxNjgyNDk3MDk1LCJleHAiOjE2ODI0OTcxMTB9.W-XINENxnqrJCOEZt5Vn-nmCYPrI3Ywzrb4CrDY8Wq4
 ###
 
 GET http://localhost:8888/products/64455388c5554f9eb7b66165
@@ -72,7 +72,7 @@ Content-Type: application/json
 {
     "name": "Van Manh",
     "email": "vanmanh@email.com",
-    "password": "13456",
+    "password": "1234",
     "phone": "9765900727",
     "isAdmin": true,
     "apartment": "Apartment 202",
@@ -91,5 +91,14 @@ POST http://localhost:8888/users/login
 Content-Type: application/json
 
 {
-    "email": "khanhngan@email.com"
+    "email": "vanmanh@email.com",
+    "password" : "1234"
+}
+
+###
+POST http://localhost:8888/users/token
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mbyI6IjY0NDg3YTg5OGQwMGQxMDU1MmViMmQ3YyIsImlhdCI6MTY4MjQ5NzA3NywiZXhwIjoxNjgyNTgzNDc3fQ.LSkjGrwGGwKxundpK9p-kixP89OqqU62IifdHMbOePc"
 }

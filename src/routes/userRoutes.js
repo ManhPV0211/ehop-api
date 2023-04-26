@@ -3,6 +3,8 @@ import userControllers from "../app/controllers/UserControllers.js";
 
 const router = express.Router();
 
+router.post("/token", userControllers.getAccessToken);
+
 router.post("/login", userControllers.login);
 
 router.post("/register", userControllers.register);
