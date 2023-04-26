@@ -43,10 +43,10 @@ const userSchema = new mongoose.Schema({
     },
 });
 
-userSchema.virtual("id").get(() => {
-    return this._id.toHexString();
-});
+// userSchema.virtual("id").get(() => {
+//     return this._id.toHexString();
+// });
 
-userSchema.set("toJSON", { virtuals: true });
+// userSchema.set("toJSON", { virtuals: true });
 
 export default mongoose.model("User", userSchema);

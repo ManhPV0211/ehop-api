@@ -35,8 +35,8 @@ Content-Type: application/json
 ###
 
 
-#POST http://localhost:8888/products
-#Content-Type: application/json
+POST http://localhost:8888/products
+Content-Type: application/json
 
 {
     "name": "Product 2",
@@ -58,11 +58,11 @@ GET http://localhost:8888/products
 
 ###
 
-#GET http://localhost:8888/products/64455388c5554f9eb7b66165
+GET http://localhost:8888/products/64455388c5554f9eb7b66165
 
 ###
 
-#PUT http://localhost:8888/products/64455388c5554f9eb7b66165
+PUT http://localhost:8888/products/64455388c5554f9eb7b66165
 
 ###
 
@@ -70,17 +70,26 @@ POST http://localhost:8888/users/register
 Content-Type: application/json
 
 {
-    "name": "Khanh Ngan",
-    "email": "khanhngan@email.com",
-    "passwordHash": "12345",
-    "phone": "123456789",
+    "name": "Van Manh",
+    "email": "vanmanh@email.com",
+    "password": "13456",
+    "phone": "9765900727",
     "isAdmin": true,
     "apartment": "Apartment 202",
     "zip": "10000",
-    "city": "Ha Noi",
+    "city": "Thon Trung",
     "country": "Viet Nam"
 }
 
 ###
 
-GET http://localhost:8888/users/list
+GET http://localhost:8888/users
+
+###
+
+POST http://localhost:8888/users/login
+Content-Type: application/json
+
+{
+    "email": "khanhngan@email.com"
+}
